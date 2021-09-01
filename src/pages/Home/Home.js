@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <MainLayout>
       <section className={`${cls.home} border-top pt-4`}>
-        <h1 className='text-center fs-1 mb-5'>Saved cities</h1>
+        <h1 className='text-center fs-1 mb-5'>Saved places</h1>
         <div className={cls.cities}>
           {
             !!savedPLaces?.length ?
@@ -41,7 +41,7 @@ export default function Home() {
                 </Card>
               )) :
               <Card className={cls.city}>
-                <p className='m-0 fw-bold'>No saved place</p>
+                <p className='m-0 fw-bold'>No saved places</p>
               </Card>
           }
         </div>
