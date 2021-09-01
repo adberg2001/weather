@@ -25,12 +25,13 @@ export default function CertainDate(props) {
     temp: Math.round((certainDateWeather[0].temp - 273) * 100) / 100,
     timezone: coords.name ? coords.name : weather?.timezone,
   } : null;
-
+  const pageTitle = new Date().getDate().toString().padStart(2, '0') === formattedDate.d ?
+    "Today" : "Tomorrow";
   return (
     <MainLayout>
       <section className={`pt-4 border-top full-height ${cls.Today}`}>
         <div className='full-width mb-3 mb-md-0'>
-          <h1 className='text-center text-md-start'>Today</h1>
+          <h1 className='text-center text-md-start'>{pageTitle}</h1>
           {weather &&
           <p className='text-center text-md-start'>{`${formattedDate.monName}, ${formattedDate.d}`}</p>
           }
