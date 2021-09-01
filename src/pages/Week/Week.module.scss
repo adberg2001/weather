@@ -1,0 +1,68 @@
+.Week {
+  * {
+    box-shadow: none !important;
+  }
+
+  .weathers {
+    display: grid;
+    grid-auto-rows: 150px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+
+    @media only screen and (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media only screen and (min-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media only screen and (min-width: 1200px) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    .weather {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(0, 0, 0, 0.23);
+
+      &.wknd {
+        background: #fff2ec;
+      }
+
+      &.active {
+        background: #e0fcd3;
+      }
+
+      .desc {
+        svg {
+          height: 18px;
+          width: 18px;
+        }
+      }
+
+      .max {
+        color: #de854c;
+      }
+
+      .min {
+        color: #022686;
+      }
+
+      p {
+        font-size: 1.3em;
+      }
+
+      h6 {
+        font-size: 1.5em;
+      }
+
+      h5 {
+        font-size: 1.6em;
+      }
+    }
+  }
+}

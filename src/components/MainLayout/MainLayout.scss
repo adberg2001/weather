@@ -1,0 +1,44 @@
+.main-wrapper {
+
+  &__header {
+    padding-top: 2em;
+
+    nav {
+      ul {
+        li {
+          display: flex;
+
+          a {
+            button {
+              font-size: 1.6em;
+              border: 1px solid rgba(0, 0, 0, 0);
+            }
+
+            &.active-link {
+              button {
+                border: 1px solid rgba(0, 0, 0, 0.23);
+                padding: 5px 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__main {
+    padding-top: 2em;
+
+    .default-weather {
+      &__add-new-city {
+        min-width: 50px;
+        height: 35px;
+        font-size: 1.4em;
+        padding: 0 5px 0 0;
+        svg{
+          height: 25px;
+        }
+      }
+    }
+  }
+}
