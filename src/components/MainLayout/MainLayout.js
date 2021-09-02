@@ -31,7 +31,7 @@ export default function MainLayout({children}) {
         <div className='default-weather d-flex justify-content-md-end justify-content-between pb-3 pb-md-0'>
           <CitiesAutoComplete className='d-flex d-md-none' id="mobile-auto-complete"/>
           <Button onClick={e => handleSafePlace(e, coords.id)} className='default-weather__add-new-city ms-3 ms-md-0' variant='outlined'>
-            <Add color='inherit'/> Safe City
+            <Add color='inherit'/> Save City
           </Button>
         </div>
         <div className='text-center'>

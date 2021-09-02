@@ -100,8 +100,8 @@ export default function WeatherProvider({children}) {
     try {
       const {data} = await axios.get(`${BASE_URL}`, {
         params: {
-          lat: coords.lat,
-          lon: coords.lon,
+          lat: coords?.lat,
+          lon: coords?.lon,
           exclude: 'minutely',
           appid: API_KEY_1,
         },

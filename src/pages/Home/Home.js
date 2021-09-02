@@ -25,7 +25,7 @@ export default function Home() {
         setSavedPlaces(state => ([...state, placeData]))
       })
     }
-  }, [])
+  }, [savedPlacesId])
 
   return (
     <MainLayout>
