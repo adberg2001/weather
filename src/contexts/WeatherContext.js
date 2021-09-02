@@ -94,8 +94,8 @@ export default function WeatherProvider({children}) {
       window.location.href = `${window.location.pathname}?lat=${suggestion.coord.lat}&lon=${suggestion.coord.lon}&id=${suggestion?.id}`
     }
   }, [suggestion]);
-
-  const fetchWeather = async () => {
+  
+  const fetchWeather = async (apiKey) => {
     startLoading();
     try {
       const {data} = await axios.get(`${BASE_URL}`, {
@@ -103,7 +103,7 @@ export default function WeatherProvider({children}) {
           lat: coords?.lat,
           lon: coords?.lon,
           exclude: 'minutely',
-          appid: '6a8d515b8d0d376e80dcb3572870e051',
+          appid: apiKey,
         },
       });
       dispatch({type: fetchWeatherSuccess, payload: data});
@@ -113,7 +113,7 @@ export default function WeatherProvider({children}) {
   };
 
   useEffect(() => {
-    fetchWeather();
+    fetchWeather('6a8d515b8d0d376e80dcb3572870e051');
   }, [coords]);
 
   return (
