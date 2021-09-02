@@ -6,7 +6,7 @@ import {
   setWeatherIcon
 } from "./contextTypes";
 import axios from "axios";
-import {API_KEY_1, BASE_URL} from "../api/api";
+import {BASE_URL} from "../api/api";
 import {getQueryPrms} from "../utils/getQueryPrms";
 import {geocodeByPlaceId, getLatLng} from "react-places-autocomplete";
 import {toast} from "react-toastify";
@@ -103,7 +103,7 @@ export default function WeatherProvider({children}) {
           lat: coords?.lat,
           lon: coords?.lon,
           exclude: 'minutely',
-          appid: API_KEY_1,
+          appid: '6a8d515b8d0d376e80dcb3572870e051',
         },
       });
       dispatch({type: fetchWeatherSuccess, payload: data});
